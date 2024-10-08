@@ -1,0 +1,73 @@
+/* Import Google Fonts for clean typography */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+
+/* Global Styling */
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: #f9fafb; /* Light soft white */
+    color: #1f2937; /* Neutral dark color */
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+}
+
+/* Main Container */
+main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px;
+}
+
+/* Header */
+header {
+    background-color: #ffffff;
+    padding: 20px;
+    text-align: center;
+    border-bottom: 1px solid #e5e7eb; /* Light border */
+}
+
+header h1 {
+    font-size: 2.5em;
+    font-weight: 600;
+    margin: 0;
+    color: #111827; /* Deep dark for strong title */
+}
+
+/* Navigation Styling */
+nav {
+    margin-top: 15px;
+}
+
+nav a {
+    text-decoration: none;
+    color: #6366f1; /* Primary blue */
+    font-weight: 500;
+    margin: 0 15px;
+    transition: color 0.3s ease;
+}
+
+nav a:hover {
+    color: #4f46e5; /* Darker blue on hover */
+}
+
+/* Image Styling */
+#image-meme {
+    display: block;
+    max-width: 100%;
+    margin: 20px auto;
+    border-radius: 12px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1); /* Soft shadow */
+}
+
+/* Footer */
+footer {
+    background-color: #f3f4f6;
+    padding: 20px;
+    text-align: center;
+    border-top: 1px solid #e5e7eb; /* Light border */
+    margin-top: 40px;
+    font-size: 0.9em;
+    color: #6b7280; /* Soft gray */
+}
