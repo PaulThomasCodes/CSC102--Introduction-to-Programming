@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Palindrome Checker</title>
+  <!-- Link to external CSS -->
+  <link rel="stylesheet" href="palindrome_style.css">
+</head>
+<body>
+  <div class="container">
+    <!-- Title of the application -->
+    <h1>Palindrome Checker</h1>
+    <p>Enter a word or phrase to check if it's a palindrome!</p>
+
+    <!-- Input field for the user to enter a string -->
+    <input type="text" id="userInput" placeholder="Enter your string here">
+    <br>
+
+    <!-- Button to check if the string is a palindrome -->
+    <button id="checkButton">Check</button>
+
+    <!-- Display result of palindrome check -->
+    <div id="result" class="result"></div>
+
+    <!-- Option to restart or exit the loop -->
+    <button id="restartButton" style="display:none;">Check Another</button>
+  </div>
+
+  <!-- Link to external JavaScript -->
+  <script src="palidrome.js"></script>
+</body>
+</html>
