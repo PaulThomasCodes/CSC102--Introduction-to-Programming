@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Strings Exercise</title>
+    <!-- Link to the CSS file -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Main title -->
+    <h1>String Manipulation</h1>
+    <div class="container">
+        <!-- Simple form to get user's info -->
+        <form id="userForm" aria-labelledby="formLabel">
+            <!-- First Name input -->
+            <label for="firstName">First Name:</label>
+            <input type="text" id="firstName" name="firstName" placeholder="Enter your first name" aria-required="true"><br><br>
+
+            <!-- Last Name input -->
+            <label for="lastName">Last Name:</label>
+            <input type="text" id="lastName" name="lastName" placeholder="Enter your last name" aria-required="true"><br><br>
+
+            <!-- Zip Code input -->
+            <label for="zipCode">Zip Code:</label>
+            <input type="text" id="zipCode" name="zipCode" placeholder="Enter your zip code" aria-required="true"><br><br>
+
+            <!-- Button to submit the form -->
+            <button type="button" onclick="validateAndShowMessage()">Submit</button>
+
+            <!-- Area for error messages -->
+            <div id="errorMessages" aria-live="polite"></div>
+        </form>
+
+        <!-- Displaying an image next to the form -->
+        <img src="deer_pic.jpg" alt="Deer in a scenic meadow" class="deer-image">
+    </div>
+
+    <!-- Area for showing the result -->
+    <p id="result"></p>
+
+    <!-- JavaScript to handle validation and showing the message -->
+    <script>
+        function validateAndShowMessage() {
+            // Clear previous error messages
+            document.getElementById("errorMessages").innerHTML = "";
+
+            // Get user input
+            var firstName = document.getElementById("firstName").value.trim();
+            var lastName = document.getElementById("lastName").value.trim();
+            var zipCode = document.getElementById("zipCode").value.trim();
+
+            // Combine first and last names
+            var fullName = firstName + " " + lastName;
+
+            // Validation checks
+            var errorMessages = [];
+
+            // Check if full name is too long
+            if (fullName.length > 20) {
+                errorMessages.push("Full name can't be longer than 20 characters.");
+            }
+
+            // Check if zip code is valid
+            if (zipCode.length !== 5 || !/^\d+$/.test(zipCode)) {
+                errorMessages.push("Invalid zip code. Enter a 5-digit number.");
+            }
+
+            // If there are errors, show them and stop
+            if (errorMessages.length > 0) {
+                document.getElementById("errorMessages").innerHTML = "<p>" + errorMessages.join("<br>") + "</p>";
+                return;
+            }
+
+            // Show welcome message if all is good
+            var secretMessage = "Welcome, " + fullName + "! Your zip code is: " + zipCode;
+            document.getElementById("result").textContent = secretMessage;
+        }
+    </script>
+</body>
+</html>
