@@ -1,0 +1,50 @@
+<!-- Paul Thomas 10/7/24 -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSC102 Index Page</title>
+    <!-- Link to external CSS -->
+    <link rel="stylesheet" href="main.css">
+
+    <script src="move_image.js">
+        
+
+    </script>  
+
+</head>
+<body>
+    <!-- Header section with navigation -->
+    <header>
+        <h1>Welcome to my CSC102 Page</h1>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="boards.html">Board</a>
+            <a href="w3game2.html">Game</a>
+        
+        </nav>
+    </header>
+
+<p>
+        <input type="button" id="StartButton" value="Start Moving Image" onclick="move_image();">
+        <input type="button" id="StopButton" value="Stop Moving Image" onclick="stop_move_image();">
+ 
+        <img src="programing_meme.jpg" id="meme_image" alt="meme_image"> 
+</p>
+
+<main>
+</main>
+
+    <!-- Main content container -->
+   
+
+    <!-- Footer with personal and university info -->
+    <footer>
+        <p>Paul Thomas</p>
+        <p>University of Advancing Technology</p>
+        <p>2625 W. Baseline Road</p>
+        <p>Tempe, AZ 85283</p>
+    </footer>
+</body>
+</html>
