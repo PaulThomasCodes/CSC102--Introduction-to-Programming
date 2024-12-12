@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>W3 Game</title>
+    <script>
+        // Create a function to run our game
+        function playGame(){
+            // We are going to narrate what's going on in this function in the console
+            console.log("playGame function was called");
+
+            // Roll the first die
+            var die1 = rollDie();
+            console.log("The first die roll is: " + die1);
+
+            // Roll the second die
+            var die2 = rollDie();
+            console.log("The second die roll is: " + die2);
+
+            // Add the dice rolls together
+            var sum = die1 + die2;
+            console.log("The sum is " + sum);
+
+            // Output the dice rolls to the page
+            document.getElementById("die1Result").textContent = "Die 1 is: " + die1;
+            document.getElementById("die2Result").textContent = "Die 2 is: " + die2;
+            document.getElementById("sumResult").textContent = "The sum is: " + sum;
+
+            // Game logic
+            if(sum == 7 || sum == 11){
+                // If you get 7 or 11, you lose.
+                document.getElementById("gameResult").textContent = "You Lose";
+            }
+            else if(die1 == die2 && die1 % 2 == 0){
+                // If the numbers are the same and even, you win.
+                document.getElementById("gameResult").textContent = "You Win!";
+            }
+            else{
+                document.getElementById("gameResult").textContent = "You tied (you pushed)";
+            }
+        } 
+
+        // Create a function to generate a die roll - a random number between 1 and 6
+        function rollDie(){
+            // Generate a random number between 1 and 6
+            var die = Math.random() * 6;
+            // Return the random number to the code that called this function
+            return Math.ceil(die); // Return a whole number between 1 and 6
+        }
+    </script>
+</head>
+<body>
+    <header>
+        <h1>Welcome to my dice game. Click the button to play.</h1>
+    </header>
+
+    <main>
+        <button onclick="playGame();">Play Game</button>
+        <div id="gameResult">Game Results</div>
+        <div id="die1Result">Die 1 result</div> 
+        <div id="die2Result">Die 2 result</div> 
+        <div id="sumResult">Sum result</div> 
+    </main>
+</body>
+</html>
