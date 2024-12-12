@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mental Health Information</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Mental Health Information</h1>
+
+    <!-- Page 1 content -->
+    <div id="page1">
+        <table>
+            <thead>
+                <tr>
+                    <th>Disorder</th>
+                    <th>Symptoms</th>
+                    <th>Treatment</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Depression</td>
+                    <td>Sadness, loss of interest, fatigue</td>
+                    <td>Therapy, medication, lifestyle changes</td>
+                </tr>
+                <tr>
+                    <td>Anxiety</td>
+                    <td>Excessive worry, restlessness, sweating</td>
+                    <td>Therapy, medication, relaxation techniques</td>
+                </tr>
+                <tr>
+                    <td>PTSD</td>
+                    <td>Flashbacks, nightmares, severe anxiety</td>
+                    <td>Therapy, medication, support groups</td>
+                </tr>
+                <tr>
+                    <td>Bipolar Disorder</td>
+                    <td>Mood swings, high energy, depression</td>
+                    <td>Therapy, medication, lifestyle changes</td>
+                </tr>
+            </tbody>
+        </table>
+        <div class="button-container">
+            <!-- Button to go to Page 2 -->
+            <button onclick="showPage2()">Page 2</button>
+        </div>
+    </div>
+
+    <!-- Page 2 content -->
+    <div id="page2" style="display:none;">
+        <table>
+            <thead>
+                <tr>
+                    <th>Disorder</th>
+                    <th>Symptoms</th>
+                    <th>Treatment</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>OCD</td>
+                    <td>Obsessive thoughts, compulsive behaviors</td>
+                    <td>Therapy, medication</td>
+                </tr>
+                <tr>
+                    <td>ADHD</td>
+                    <td>Inattention, hyperactivity, impulsiveness</td>
+                    <td>Therapy, medication, behavioral strategies</td>
+                </tr>
+                <tr>
+                    <td>Eating Disorders</td>
+                    <td>Extreme eating behaviors, body image issues</td>
+                    <td>Therapy, nutrition education, medication</td>
+                </tr>
+                <tr>
+                    <td>Schizophrenia</td>
+                    <td>Delusions, hallucinations, disorganized thinking</td>
+                    <td>Therapy, medication, support</td>
+                </tr>
+            </tbody>
+        </table>
+        <div class="button-container">
+            <!-- Button to go back to Page 1 -->
+            <button onclick="showPage1()">Back to Page 1</button>
+        </div>
+    </div>
+
+    <script>
+        // Function to show Page 2 and hide Page 1
+        function showPage2() {
+            document.getElementById('page1').style.display = 'none';
+            document.getElementById('page2').style.display = 'block';
+        }
+
+        // Function to show Page 1 and hide Page 2
+        function showPage1() {
+            document.getElementById('page2').style.display = 'none';
+            document.getElementById('page1').style.display = 'block';
+        }
+    </script>
+</body>
+</html>
