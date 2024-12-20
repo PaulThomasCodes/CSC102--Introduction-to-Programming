@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pizza Chef Array Example</title>
+    <link rel="stylesheet" href="pizza_chef.css">
+
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="objectives.html">Objectives</a>
+        <a href="tables.html">Tables</a>
+        <a href="palindrome.html">Palindrome Checker</a>
+        <a href="meme_page.html">Meme Page</a>
+        <a href="w3game.html">Game</a>
+    </nav>
+</head>
+<body>
+    <h1>Pizza Chef Array Example</h1>
+    <p>Total Pizza Baked: <span id="spnTotalPizzas">0</span></p>
+    <p>Baking Level: <span id="spnLevel">Beginner Chef</span></p>
+    <label for="numpizza">New Pizzas Baked</label>
+    <input type="number" id="numPizzas" name="numPizzas" min="0" max="1000" value="0">
+    <button id="updateStats">Update Stats</button>
+    <p>Toppings: <span id="spnToppings"></span></p>
+
+    <script>
+        // Function to update the chef's stats based on the number of pizzas baked
+        function updateChefstats() {
+            // Get the number of new pizzas
+            var newPizzas = parseInt(document.getElementById("numPizzas").value);
+
+            // Get the current total of pizzas baked, or default to 0 if the span is empty
+            var oldPizzas = parseInt(document.getElementById("spnTotalPizzas").textContent) || 0;
+
+            console.log("newPizzas=" + newPizzas);
+            console.log("oldPizzas=" + oldPizzas);
+
+            // Add the new pizzas to the old total
+            var totalPizzas = newPizzas + oldPizzas;
+
+            // Update the displayed total pizzas
+            document.getElementById("spnTotalPizzas").textContent = totalPizzas;
+
+            // Determine the chef's level based on the total number of pizzas baked
+            var chefLevel;
+            if (totalPizzas > 500) {
+                chefLevel = "Master Chef";
+            } else if (totalPizzas > 300) {
+                chefLevel = "Expert Chef";
+            } else if (totalPizzas > 100) {
+                chefLevel = "Skilled Chef";
+            } else {
+                chefLevel = "Beginner Chef";
+            }
+
+            // Update the displayed chef level
+            document.getElementById("spnLevel").textContent = chefLevel;
+        }
+
+        // Create an array to store the list of toppings
+        var arrToppings = ["Pepperoni", "Mushrooms", "Olives", "Ham", "Anchovies", "Pineapple", "Cinnamon"];
+
+        // Use a loop to display all the toppings
+        for (var i = 0; i < arrToppings.length; i++) {
+            // Append each topping to the toppings span with a comma, except for the last topping
+            document.getElementById("spnToppings").innerHTML += arrToppings[i] + (i < arrToppings.length - 1 ? ", " : "");
+        }
+
+        // Add an event listener to handle button clicks for updating stats
+        document.getElementById("updateStats").addEventListener("click", updateChefstats);
+    </script>
+</body>
+</html>
