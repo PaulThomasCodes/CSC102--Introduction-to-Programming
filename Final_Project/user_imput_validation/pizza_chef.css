@@ -1,0 +1,150 @@
+/* General Styling */
+body {
+    /* Add a fun animated gradient background */
+    font-family: 'Comic Sans MS', 'Comic Sans', cursive;
+    background: linear-gradient(45deg, #ff9a9e, #fad0c4, #fad0c4);
+    background-size: 400% 400%;
+    animation: gradientBG 10s ease infinite;
+    color: #333;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+/* Animation for the gradient background */
+@keyframes gradientBG {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+/* Navigation Bar Styling */
+nav {
+    background-color: #ff6f61; /* Tomato red background */
+    padding: 10px 0;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+nav a {
+    /* Style for navigation links */
+    text-decoration: none;
+    color: white;
+    font-size: 1.2rem;
+    margin: 0 15px;
+    padding: 10px 20px;
+    border-radius: 10px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+nav a:hover {
+    /* Add hover effect for links */
+    background-color: #ff3d00; /* Darker red */
+    transform: scale(1.1); /* Slightly grow when hovered */
+}
+
+nav a:active {
+    /* Slight shrink effect when clicked */
+    transform: scale(0.95);
+}
+
+/* Header Styling */
+h1 {
+    /* Make the header bold and eye-catching */
+    font-size: 3rem;
+    color: #ff6f61;
+    text-shadow: 2px 2px #ffeb3b;
+    margin-top: 20px;
+}
+
+/* Paragraph Styling */
+p {
+    /* Add spacing between paragraphs for readability */
+    font-size: 1.5rem;
+    margin: 20px 0;
+}
+
+/* Input and Label Styling */
+label {
+    /* Style labels with a pizza-themed color */
+    font-size: 1.2rem;
+    color: #ff5722;
+}
+
+input[type="number"] {
+    /* Create a playful and clean style for the input box */
+    border: 2px solid #ff5722;
+    border-radius: 10px;
+    padding: 10px;
+    width: 100px;
+    font-size: 1rem;
+    color: #333;
+    background-color: #fffbe6; /* Light yellow background */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    margin: 10px 0;
+}
+
+input[type="number"]:focus {
+    /* Highlight the input when focused */
+    border-color: #ffa726;
+    outline: none;
+}
+
+/* Button Styling */
+button {
+    /* Add a bold, inviting button style */
+    font-size: 1.2rem;
+    color: white;
+    background-color: #ff6f61; /* Tomato red */
+    border: none;
+    border-radius: 15px;
+    padding: 10px 20px;
+    cursor: pointer;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+button:hover {
+    /* Make buttons pop when hovered */
+    background-color: #ff3d00; /* Darker red */
+    transform: scale(1.1);
+}
+
+/* Span Styling */
+span {
+    /* Add a subtle box style for span elements */
+    font-weight: bold;
+    color: #795548; /* Pizza crust brown */
+    background: #ffecb3; /* Light yellow */
+    border-radius: 5px;
+    padding: 2px 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+/* Toppings Display */
+#spnToppings {
+    /* Create a neat box for the toppings list */
+    display: inline-block;
+    padding: 10px;
+    font-size: 1.2rem;
+    background-color: #ffe0b2; /* Light beige */
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    margin-top: 20px;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 600px) {
+    /* Adjust styles for smaller screens */
+    h1 {
+        font-size: 2rem;
+    }
+    p, label {
+        font-size: 1rem;
+    }
+    button {
+        font-size: 1rem;
+    }
+}
