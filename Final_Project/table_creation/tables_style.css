@@ -1,0 +1,144 @@
+/* General Body Styling */
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    margin: 0;
+    font-family: 'Roboto', sans-serif; /* Modern font */
+    background-color: #f0f3f7; /* Clean background */
+    color: #333; /* Dark text color */
+    text-align: center;
+}
+
+/* Style the title */
+h1 {
+    color: #4e6959; /* Soft green for the title */
+    margin-bottom: 20px;
+    font-size: 2.5em;
+    font-weight: bold;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+/* Navigation Bar Styling */
+nav {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-bottom: 30px; /* Add space between nav and main content */
+}
+
+nav a {
+    text-decoration: none;
+    color: #ffffff; /* White text */
+    background-color: #4CAF50; /* Soft green background */
+    padding: 12px 25px;
+    border-radius: 30px; /* Rounded edges for a modern look */
+    font-weight: bold;
+    text-transform: uppercase;
+    font-size: 1.1em;
+    transition: all 0.3s ease; /* Smooth transition */
+}
+
+nav a:hover {
+    background-color: #3b8f3a; /* Darker green on hover */
+    transform: translateY(-3px); /* Slight lift on hover */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add shadow on hover */
+}
+
+nav a:active {
+    transform: translateY(0); /* Prevent extra movement when clicked */
+    box-shadow: none;
+}
+
+/* Table Styling */
+table {
+    border-collapse: collapse;
+    width: 80%;
+    margin: 20px auto;
+    background-color: #ffffff;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+    text-align: left;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+thead {
+    background-color: #4CAF50;
+    color: white;
+}
+
+th, td {
+    padding: 12px 18px;
+    border-bottom: 1px solid #ddd;
+}
+
+/* Hover effect for rows */
+tr:hover {
+    background-color: #f1f1f1;
+    cursor: pointer;
+}
+
+th {
+    background-color: #4CAF50;
+    color: white;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+/* Button Container Styling */
+.button-container {
+    display: flex;
+    justify-content: center;
+    width: 80%;
+    margin: 0 auto;
+}
+
+/* Button Styling */
+button {
+    margin-top: 20px;
+    padding: 12px 25px;
+    background-color: #c9a44a; /* Soft gold button color */
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 1.1em;
+    font-weight: bold;
+    transition: background-color 0.3s, transform 0.2s ease;
+}
+
+button:hover {
+    background-color: #b4913f;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+button:active {
+    transform: translateY(0);
+    box-shadow: none;
+}
+
+/* Responsive Design for Small Screens */
+@media (max-width: 768px) {
+    table {
+        width: 90%;
+    }
+
+    button {
+        width: 100%;
+        padding: 14px;
+    }
+
+    nav {
+        flex-direction: column; /* Stack the nav items vertically on smaller screens */
+        gap: 15px;
+    }
+
+    nav a {
+        padding: 12px 20px;
+        font-size: 1em;
+    }
+}
