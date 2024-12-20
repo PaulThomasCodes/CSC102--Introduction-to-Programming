@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>W3 Game</title>
+
+    <link rel="stylesheet" href="w3game_style.css">
+
+    <script>
+        // Create a function to run our game
+        function playGame(){
+            console.log("playGame function was called");
+
+            var die1 = rollDie();
+            console.log("The first die roll is: " + die1);
+
+            var die2 = rollDie();
+            console.log("The second die roll is: " + die2);
+
+            var sum = die1 + die2;
+            console.log("The sum is " + sum);
+
+            document.getElementById("die1Result").textContent = "Die 1 is: " + die1;
+            document.getElementById("die2Result").textContent = "Die 2 is: " + die2;
+            document.getElementById("sumResult").textContent = "The sum is: " + sum;
+
+            if(sum == 7 || sum == 11){
+                document.getElementById("gameResult").textContent = "You Lose";
+            }
+            else if(die1 == die2 && die1 % 2 == 0){
+                document.getElementById("gameResult").textContent = "You Win!";
+            }
+            else{
+                document.getElementById("gameResult").textContent = "You tied (you pushed)";
+            }
+        }
+
+        function rollDie(){
+            var die = Math.random() * 6;
+            return Math.ceil(die);
+        }
+    </script>
+</head>
+<body>
+    <nav>
+        <a href="index.html" class="active">Home</a>
+        <a href="meme_page.html">Meme</a>
+        <a href="tables.html">Tables</a>
+        <a href="palindrome.html">Palindrome Checker</a>
+        <a href="pizza_chef.html">User Validation</a>
+        <a href="palindrome.html">Palindrome Checker</a>
+        <a href="objectives.html">Objectives</a>
+    </nav>
+    
+
+    <header>
+        <h1>Welcome to my dice game. Click the button to play.</h1>
+    </header>
+
+    <main>
+        <button onclick="playGame();">Play Game</button>
+        <div id="gameResult">Game Results</div>
+        <div id="die1Result">Die 1 result</div> 
+        <div id="die2Result">Die 2 result</div> 
+        <div id="sumResult">Sum result</div>
+
+        <!-- Game Rules Information Box -->
+        <div class="rules-box">
+            <h3>Game Rules</h3>
+            <ul>
+                <li><strong>Win:</strong> If both dice are the same and even (e.g., 2, 2 or 4, 4).</li>
+                <li><strong>Lose:</strong> If the sum of the dice is 7 or 11.</li>
+                <li><strong>Tie:</strong> If neither of the win or lose conditions are met.</li>
+            </ul>
+        </div>
+    </main>
+
+    <footer>
+        &copy; 2024 W3 Game. All rights reserved.
+    </footer>
+</body>
+</html>
