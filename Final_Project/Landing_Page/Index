@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome to my Boards page</title>
+    <link rel="stylesheet" href="main_style.css">
+</head>
+<body>
+<header>
+    <h1>Welcome to my boards website</h1>
+
+    <nav class="navbar">
+        <a href="index.html">Home</a>
+        <a href="objectives.html">Board</a>
+        <a href="tables.html">Tables</a>
+        <a href="palindrome.html">Palindrome Checker</a>
+        <a href="w3game.html">Game</a>
+        <a href="pizza_chef.html">User Validation</a>
+    </header>
+    </nav>
+    <div class="container">
+        <div class="left">
+            <img src="home_pic.jpg" alt="Ekua Ashanti" class="profile-pic">
+        </div>
+        <div class="right">
+            <div class="about-me">
+                <h1>About Me</h1>
+                <p>Hello! I'm Paul Thomas, a senior at University of Advancing Technology majoring in digital marketing with skills in Data Science, Machine Learning, and Data analytics. My Programming languages are Python, SQL, PHP, JavaScript, HTML, and soon to be C#. Mymarketing skills are in social Media, paid ads, Strategy, and sales.  I am passionate about use technology to create innovative solutions to real-world problems in marketing and business as a whole. I am dedicated to making a positive impact in the world through my work.</p>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <p>Paul Thomas</p>
+        <p>University of Advancing Technology</p>
+        <p>2625 W. Baseline Road</p>
+        <p>Tempe, AZ 85283</p>
+    </footer>
+</body>
+</html>
