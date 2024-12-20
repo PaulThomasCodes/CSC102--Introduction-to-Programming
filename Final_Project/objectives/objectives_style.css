@@ -1,0 +1,114 @@
+/* General Styling */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    color: #333;
+    background: linear-gradient(120deg, #A5D6A7, #C8E6C9, #FFFFFF); /* Soft green transitioning to white */
+    background-size: 200% 200%;
+    animation: backgroundAnimation 8s ease infinite;
+}
+
+/* Animation for the background */
+@keyframes backgroundAnimation {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+/* Navigation Bar Styling */
+.navbar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #FFFFFF; /* Soft white background for navbar */
+    padding: 20px 0;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 20px;
+    margin-bottom: 30px;
+}
+
+.navbar a {
+    color: #388E3C; /* Muted green for links */
+    text-decoration: none;
+    font-size: 1.4rem;
+    font-weight: bold;
+    margin: 0 20px;
+    padding: 12px 20px;
+    border-radius: 25px;
+    background-color: #FFFFFF; /* White background for the buttons */
+    transition: transform 0.3s, background-color 0.3s, box-shadow 0.3s ease;
+    display: inline-block;
+}
+
+.navbar a:hover {
+    background-color: #81C784; /* Soft light green hover effect */
+    color: #FFFFFF;
+    transform: scale(1.1);
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.15);
+}
+
+.navbar a:active {
+    transform: scale(0.95);
+}
+
+/* Main content styling */
+main {
+    padding: 40px 20px;
+    text-align: center;
+    background: #FFFFFF; /* Clean white background to highlight content */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+    border-radius: 15px;
+    margin: 0 20px;
+}
+
+/* Objective Section */
+main p {
+    font-size: 1.5rem;
+    line-height: 1.8;
+    margin-bottom: 30px;
+    color: #444; /* Dark gray text for better readability */
+}
+
+main p span {
+    display: block;
+    font-size: 1.8rem;
+    margin-bottom: 10px;
+    color: #388E3C; /* Accent green for emphasis */
+}
+
+/* Footer Styling */
+footer {
+    background: #FFFFFF; /* Light white background to balance the green tones */
+    color: #388E3C; /* Muted green text for footer */
+    text-align: center;
+    padding: 20px 0;
+    box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.1);
+    position: relative;
+    margin-top: 50px;
+}
+
+footer p {
+    margin: 5px 0;
+    font-size: 1rem;
+    letter-spacing: 0.5px;
+}
+
+/* Add some subtle color for headings */
+h1 {
+    color: #388E3C; /* Muted green header */
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+    .navbar a {
+        font-size: 1.2rem;
+        padding: 10px 15px;
+        margin: 0 10px;
+    }
+
+    main p {
+        font-size: 1.3rem;
+    }
+}
